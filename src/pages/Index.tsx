@@ -4,6 +4,7 @@ import FoodPack from "@/components/FoodPack";
 import TargetReach from "@/components/TargetReach";
 import ExecutionPlan from "@/components/ExecutionPlan";
 import ImpactProjection from "@/components/ImpactProjection";
+import SecurityLogistics from "@/components/SecurityLogistics";
 import AboutFoundation from "@/components/AboutFoundation";
 import ClosingSection from "@/components/ClosingSection";
 
@@ -15,6 +16,7 @@ const Index = () => {
       <FoodPack />
       <TargetReach />
       <ExecutionPlan />
+      <SecurityLogistics />
       <ImpactProjection />
       <AboutFoundation />
       <ClosingSection />
