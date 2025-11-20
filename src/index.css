@@ -51,6 +51,12 @@ All colors MUST be HSL.
     --shadow-elegant: 0 10px 40px -10px hsl(150 60% 25% / 0.2);
     --shadow-gold: 0 4px 20px -4px hsl(45 85% 55% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Responsive typography tokens */
+    --heading-fluid-lg: clamp(2.5rem, 8vw, 4.5rem);
+    --heading-fluid-xl: clamp(2.75rem, 9vw, 5.5rem);
+    --body-fluid: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+    --eyebrow-letter-spacing: 0.2em;
   }
 }
 
@@ -60,18 +66,34 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: var(--body-fluid);
+    line-height: 1.65;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
+    line-height: 1.1;
+    text-wrap: balance;
   }
 
   .heading-display {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -113,5 +135,21 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .eyebrow {
+    letter-spacing: var(--eyebrow-letter-spacing);
+    text-transform: uppercase;
+  }
+
+  .safe-px {
+    padding-left: clamp(1rem, 4vw, 2.5rem);
+    padding-right: clamp(1rem, 4vw, 2.5rem);
   }
 }

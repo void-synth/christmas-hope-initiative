@@ -22,22 +22,25 @@ const ProblemStatement = () => {
   return (
     <section className="section-spacing bg-secondary/30">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="heading-display text-4xl sm:text-5xl lg:text-6xl text-primary mb-6">
+        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+          <h2
+            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            style={{ fontSize: "var(--heading-fluid-lg)" }}
+          >
             The Challenge We're Addressing
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             Understanding the urgent need behind this initiative
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {problems.map((problem, index) => {
             const Icon = problem.icon;
             return (
               <div 
                 key={index}
-                className="card-elegant text-center group"
+                className="card-elegant text-center group h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 mb-6 group-hover:scale-110 transition-transform duration-300">

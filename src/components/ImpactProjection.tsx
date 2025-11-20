@@ -17,11 +17,14 @@ const ImpactProjection = () => {
   return (
     <section className="section-spacing bg-secondary/30">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="heading-display text-4xl sm:text-5xl lg:text-6xl text-primary mb-6">
+        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+          <h2
+            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            style={{ fontSize: "var(--heading-fluid-lg)" }}
+          >
             Projected Impact
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             Measuring the reach and effectiveness of our Christmas 2025 initiative
           </p>
         </div>
@@ -50,10 +53,10 @@ const ImpactProjection = () => {
 
         {/* Past Outreach Photos */}
         <div>
-          <h3 className="text-3xl font-serif font-semibold text-primary text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-primary text-center mb-6 sm:mb-8 text-balance">
             Moments from Past Outreach Programs
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {images.map((img, index) => (
               <div 
                 key={index}

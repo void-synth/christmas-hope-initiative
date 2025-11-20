@@ -13,58 +13,59 @@ const FoodPack = () => {
   return (
     <section id="food-pack" className="section-spacing bg-background">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <Badge className="mb-4 text-lg px-6 py-2 bg-gold text-gold-foreground">
+        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+          <Badge className="mb-3 sm:mb-4 text-base sm:text-lg px-5 sm:px-6 py-2 bg-gold text-gold-foreground">
             Each Family Receives
           </Badge>
-          <h2 className="heading-display text-4xl sm:text-5xl lg:text-6xl text-primary mb-6">
+          <h2
+            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            style={{ fontSize: "var(--heading-fluid-lg)" }}
+          >
             The Christmas 2025 Food Pack
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             A carefully curated selection of essential food items to bring joy and sustenance to families
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           {/* Food Pack Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full">
             <img 
               src={foodPackImg} 
               alt="Christmas Food Pack Contents"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
           </div>
 
           {/* Items List */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {items.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div 
                   key={index}
-                  className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border/50 hover:border-gold/50 transition-all duration-300 hover:shadow-lg"
+                  className="flex items-start gap-4 p-5 sm:p-6 rounded-xl bg-card border border-border/50 hover:border-gold/50 transition-all duration-300 hover:shadow-lg flex-col sm:flex-row"
                 >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-primary" />
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-serif font-semibold text-primary mb-1">
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl font-serif font-semibold text-primary mb-1">
                       {item.name}
                     </h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{item.description}</p>
                   </div>
                 </div>
               );
             })}
 
             {/* Value Badge */}
-            <div className="mt-8 p-8 rounded-2xl bg-gradient-to-br from-gold/10 to-gold/5 border-2 border-gold/30">
-              <div className="text-center">
-                <p className="text-sm text-muted-foreground mb-2">Total Pack Value</p>
-                <p className="text-5xl font-serif font-bold text-gold">₦18,150</p>
-                <p className="text-sm text-muted-foreground mt-2">per family</p>
-              </div>
+            <div className="mt-6 sm:mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gold/10 to-gold/5 border-2 border-gold/30 text-center">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-[0.2em]">Total Pack Value</p>
+              <p className="text-4xl sm:text-5xl font-serif font-bold text-gold">₦18,150</p>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-2">per family</p>
             </div>
           </div>
         </div>

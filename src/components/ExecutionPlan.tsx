@@ -27,11 +27,14 @@ const ExecutionPlan = () => {
   return (
     <section className="section-spacing bg-background">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="heading-display text-4xl sm:text-5xl lg:text-6xl text-primary mb-6">
+        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+          <h2
+            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            style={{ fontSize: "var(--heading-fluid-lg)" }}
+          >
             Execution Strategy
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             A systematic four-step approach ensuring transparency and efficiency
           </p>
         </div>
@@ -73,25 +76,25 @@ const ExecutionPlan = () => {
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div key={index} className="relative pl-16">
+                <div key={index} className="relative pl-14 sm:pl-16">
                   {/* Step Number */}
-                  <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light text-gold-foreground flex items-center justify-center font-bold text-xl shadow-lg">
+                  <div className="absolute left-0 top-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-gold to-gold-light text-gold-foreground flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg">
                     {index + 1}
                   </div>
                   
                   {/* Vertical Line */}
                   {index < steps.length - 1 && (
-                    <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-gradient-to-b from-primary to-gold" style={{ height: 'calc(100% + 1.5rem)' }} />
+                    <div className="absolute left-5 sm:left-6 top-10 sm:top-12 bottom-0 w-0.5 bg-gradient-to-b from-primary to-gold" style={{ height: 'calc(100% + 1.25rem)' }} />
                   )}
                   
                   {/* Card */}
                   <div className="card-elegant">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
-                        <Icon className="w-7 h-7 text-primary" />
+                    <div className="flex items-start gap-4 flex-col sm:flex-row">
+                      <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-serif font-semibold text-primary mb-2">
+                        <h3 className="text-lg sm:text-xl font-serif font-semibold text-primary mb-2">
                           {step.title}
                         </h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
