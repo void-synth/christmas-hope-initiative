@@ -41,23 +41,23 @@ const SecurityLogistics = () => {
   ];
 
   return (
-    <section className="section-spacing bg-secondary/30">
+    <section className="section-spacing py-12 sm:py-16 md:py-24 bg-secondary/30">
       <div className="section-container">
-        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
-          <p className="eyebrow text-sm tracking-[0.25em] text-gold mb-3">Safety First</p>
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-2 sm:px-0">
+          <p className="eyebrow text-xs sm:text-sm tracking-[0.25em] text-gold mb-2 sm:mb-3">Safety First</p>
           <h2
-            className="heading-display text-3xl sm:text-5xl text-primary mb-4 sm:mb-6 text-balance"
+            className="heading-display text-3xl sm:text-4xl lg:text-6xl text-primary mb-3 sm:mb-5 text-balance"
             style={{ fontSize: "var(--heading-fluid-lg)" }}
           >
             Security & Logistics Assurance
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
             Every distribution centre follows a disciplined security plan to keep families calm,
             queues efficient, and volunteers protected from crowd surges.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
+        <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-10">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
@@ -82,8 +82,8 @@ const SecurityLogistics = () => {
             return (
               <div key={block.heading} className="card-elegant space-y-4 bg-card">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <h4 className="text-lg sm:text-xl font-serif font-semibold text-primary">{block.heading}</h4>
                 </div>

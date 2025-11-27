@@ -25,25 +25,25 @@ const ExecutionPlan = () => {
   ];
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing py-12 sm:py-16 md:py-24 bg-background">
       <div className="section-container">
-        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-2 sm:px-0">
           <h2
-            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            className="heading-display text-3xl sm:text-4xl lg:text-6xl text-primary mb-3 sm:mb-5 text-balance"
             style={{ fontSize: "var(--heading-fluid-lg)" }}
           >
             Execution Strategy
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
             A systematic four-step approach ensuring transparency and efficiency
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           {/* Desktop: Horizontal Flow */}
-          <div className="hidden md:grid md:grid-cols-4 gap-6 relative">
+          <div className="hidden md:grid md:grid-cols-4 gap-5 lg:gap-6 relative">
             {/* Connection Lines */}
-            <div className="absolute top-14 left-0 right-0 h-1 bg-gradient-to-r from-primary via-gold to-primary" style={{ width: '90%', left: '5%' }} />
+            <div className="absolute top-14 left-0 right-0 h-1 bg-gradient-to-r from-primary via-gold to-primary" style={{ width: '88%', left: '6%' }} />
             
             {steps.map((step, index) => {
               const Icon = step.icon;
@@ -72,13 +72,13 @@ const ExecutionPlan = () => {
           </div>
 
           {/* Mobile: Vertical Flow */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-5">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div key={index} className="relative pl-14 sm:pl-16">
+                <div key={index} className="relative pl-12 sm:pl-16">
                   {/* Step Number */}
-                  <div className="absolute left-0 top-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-gold to-gold-light text-gold-foreground flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg">
+                  <div className="absolute left-0 top-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-gold to-gold-light text-gold-foreground flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg">
                     {index + 1}
                   </div>
                   
@@ -90,8 +90,8 @@ const ExecutionPlan = () => {
                   {/* Card */}
                   <div className="card-elegant">
                     <div className="flex items-start gap-4 flex-col sm:flex-row">
-                      <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
-                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                    <div className="flex-shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg sm:text-xl font-serif font-semibold text-primary mb-2">

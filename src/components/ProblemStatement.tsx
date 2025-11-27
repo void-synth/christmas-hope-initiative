@@ -20,21 +20,21 @@ const ProblemStatement = () => {
   ];
 
   return (
-    <section className="section-spacing bg-secondary/30">
+    <section className="section-spacing py-12 sm:py-16 md:py-24 bg-secondary/30">
       <div className="section-container">
-        <div className="text-center mb-12 sm:mb-16 px-3 sm:px-0">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-2 sm:px-0">
           <h2
-            className="heading-display text-3xl sm:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6 text-balance"
+            className="heading-display text-3xl sm:text-4xl lg:text-6xl text-primary mb-3 sm:mb-5 text-balance"
             style={{ fontSize: "var(--heading-fluid-lg)" }}
           >
             The Challenge We're Addressing
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
             Understanding the urgent need behind this initiative
           </p>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {problems.map((problem, index) => {
             const Icon = problem.icon;
             return (
