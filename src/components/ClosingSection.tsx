@@ -45,10 +45,18 @@ const ClosingSection = () => {
                 </a>
               </Button>
               <Button 
+                asChild
                 variant="outline"
                 className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 h-auto border border-white bg-white text-primary hover:bg-white/90 hover:text-primary backdrop-blur-sm w-full sm:w-auto"
               >
-                Contact the Foundation
+                <a
+                  href="/SOF_Waybill_Form.pdf"
+                  download
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Download Waybill Form
+                </a>
               </Button>
             </div>
           </div>
